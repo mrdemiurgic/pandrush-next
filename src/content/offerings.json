@@ -1,0 +1,85 @@
+{
+  "packages": [
+    {
+      "name": "Church Service / Event",
+      "basePrice": 299,
+      "basePriceLabel": "$299",
+      "description": "Spread your brand and message!",
+      "features": [
+        "1 Videographer",
+        "Logo",
+        "Video of entire footage",
+        "2 hours of filming"
+      ],
+      "options": [
+        {
+          "defaultValue": 0,
+          "name": "Extra hours",
+          "price": 100,
+          "type": "hourly",
+          "showPrice": true
+        }
+      ]
+    },
+    {
+      "name": "Filmmaking/Promotion",
+      "basePrice": 799,
+      "basePriceLabel": "$899",
+      "description": "We will bring your dream movie/promotion to reality!",
+      "features": [
+        "1 Videographer",
+        "6 hours of filming",
+        "5-10 min film / 1 - 3 min promo"
+      ],
+      "options": [
+        {
+          "defaultValue": 0,
+          "name": "Extra hours",
+          "price": 100,
+          "type": "hourly",
+          "showPrice": true
+        },
+        {
+          "defaultValue": 0,
+          "name": "Extra Videographer",
+          "price": 500,
+          "type": "once",
+          "showPrice": true
+        },
+        {
+          "defaultValue": 0,
+          "name": "Drone footage",
+          "price": 300,
+          "type": "once",
+          "showPrice": true
+        }
+      ]
+    },
+    {
+      "name": "Wedding",
+      "basePrice": 1599,
+      "basePriceLabel": "$1599",
+      "description": "Not a single moment will be missed on your special day!",
+      "features": [
+        "2 Videographer",
+        "6 hours of filming",
+        "5-15 mins of highlight video from entire day",
+        "1-2 mins of video for social media use"
+      ],
+      "options": [
+        {
+          "defaultValue": 0,
+          "name": "Extra filming hours",
+          "price": 300,
+          "type": "hourly",
+          "showPrice": true
+        }
+      ]
+    }
+  ],
+  "featuresInAll": [
+    "4k high quality footage",
+    "Professional editing and effects",
+    "Raw unedited video footage"
+  ]
+}

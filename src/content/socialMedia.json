@@ -1,0 +1,23 @@
+[
+  {
+    "type": "youtube",
+    "color": "#ff0000",
+    "hoverColor": "#FF6666",
+    "url": "https://www.youtube.com/channel/UCNm-CKGs2pgS3_PoUbSCrtQ",
+    "text": "Check out my YouTube channel!"
+  },
+  {
+    "type": "facebook",
+    "color": "#3b5998",
+    "hoverColor": "#6483C3",
+    "url": "https://www.facebook.com/Pandrush/",
+    "text": "Connect with me on Facebook!"
+  },
+  {
+    "type": "email",
+    "color": "#6CCFF6",
+    "hoverColor": "#AFE5FA",
+    "url": "mailto:pandrushllc@gmail.com",
+    "text": "Send me an e-mail!"
+  }
+]
