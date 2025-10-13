@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from "react";
 
-import { BeatLoader, PulseLoader } from 'react-spinners';
+import { BeatLoader } from "react-spinners";
 
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
-import { sendContactForm } from '@/lib/email-client';
+import { sendContactForm } from "@/lib/email-client";
 
-import * as S from './styles';
+import * as S from "./styles";
 
 const ContactForm = () => {
-  const [name, setName] = useState<string>('');
-  const [statusType, setStatusType] = useState<'error' | 'success'>('success');
+  const [name, setName] = useState<string>("");
+  const [statusType, setStatusType] = useState<"error" | "success">("success");
   const [isAttempting, setIsAttempting] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>('');
-  const [message, setMessage] = useState<string>('');
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
-  const [status, setStatus] = useState<string>('');
+  const [status, setStatus] = useState<string>("");
   const [showStatus, setShowStatus] = useState<boolean>(false);
 
   const onChangeName = (e: ChangeEvent<HTMLInputElement>) => {
@@ -42,20 +42,20 @@ const ContactForm = () => {
     if (status === 200) {
       setTimeout(() => {
         setShowStatus(false);
-        setName('');
-        setEmail('');
-        setMessage('');
+        setName("");
+        setEmail("");
+        setMessage("");
       }, 2000);
 
-      setStatusType('success');
-      setStatus('Thank you for your message! We will be in touch soon.');
+      setStatusType("success");
+      setStatus("Thank you for your message! We will be in touch soon.");
     } else {
       setTimeout(() => {
         setShowStatus(false);
       }, 2000);
 
-      setStatusType('error');
-      setStatus('Unable to submit form. Please try again later.');
+      setStatusType("error");
+      setStatus("Unable to submit form. Please try again later.");
     }
 
     setShowStatus(true);

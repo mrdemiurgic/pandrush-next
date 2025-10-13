@@ -1,12 +1,12 @@
-import React, { useRef, useEffect } from 'react';
-import YouTube from 'react-youtube';
+import React, { useRef, useEffect } from "react";
+import YouTube, { YouTubePlayer } from "react-youtube";
 
-import * as S from './styles';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import * as S from "./styles";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
-import { getThumbnailUrl } from '../../utils/youtube';
+import { getThumbnailUrl } from "../../utils/youtube";
 
-const youtubeOpts  = {
+const youtubeOpts = {
   playerVars: {
     autoplay: 0,
     controls: 1,
@@ -45,12 +45,12 @@ const Video = ({
   selectedId,
   select = () => {},
 }: VideoProps) => {
-  const videoRef = useRef<any>(null);
+  const videoRef = useRef<YouTubePlayer>(null);
   const show = youtubeId === selectedId;
 
   useEffect(() => {
     // if (!show && videoRef.current !== undefined) {
-      videoRef.current?.pauseVideo();
+    videoRef.current?.pauseVideo();
     // }
   }, [show]);
 
@@ -61,7 +61,7 @@ const Video = ({
     }
   };
 
-  const onReady = (e: { target: any }) => {
+  const onReady = (e: { target: unknown }) => {
     videoRef.current = e.target;
   };
 

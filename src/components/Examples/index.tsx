@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import Video from './Video';
-import { Container } from './styles';
+import Video from "./Video";
+import { Container } from "./styles";
 
 interface Props {
   /**
@@ -11,15 +11,15 @@ interface Props {
 }
 
 const Examples = ({ children }: Props) => {
-  const [selectedId, setSelectedId] = useState<string>('');
+  const [selectedId, setSelectedId] = useState<string>("");
 
   return (
     <Container>
       {React.Children.map(children, (child) =>
-        React.cloneElement(child as JSX.Element, {
+        React.cloneElement(child as React.JSX.Element, {
           selectedId,
           select: setSelectedId,
-        }),
+        })
       )}
     </Container>
   );

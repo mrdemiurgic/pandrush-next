@@ -11,6 +11,8 @@ import spacing from "../../styles/spacing";
 import * as S from "./styles";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
+let raf: number | undefined;
+
 const FixedNav = () => {
   const fixedNavRef = useRef<HTMLDivElement>(null);
 
@@ -18,8 +20,6 @@ const FixedNav = () => {
 
   useLayoutEffect(() => {
     const scrollHandler = () => {
-      let raf: number | undefined;
-
       if (raf !== undefined) {
         window.cancelAnimationFrame(raf);
       }

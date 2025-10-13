@@ -1,6 +1,5 @@
-import styled from 'styled-components';
-import colors from '../../styles/colors';
-import spacing from '../../styles/spacing';
+import styled from "styled-components";
+import spacing from "../../styles/spacing";
 
 export const Container = styled.div`
   display: flex;
@@ -18,7 +17,7 @@ type ItemProps = {
   $textColor: string;
   $textHoverColor: string;
   $separatorColor: string;
-}
+};
 
 export const Item = styled.a<ItemProps>`
   /* display: inline-block; */
