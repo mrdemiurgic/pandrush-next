@@ -1,14 +1,16 @@
 import React, { useRef, useEffect } from "react";
-import YouTube, { YouTubePlayer } from "react-youtube";
+import YouTube, { YouTubePlayer, YouTubeProps } from "react-youtube";
 
 import * as S from "./styles";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 import { getThumbnailUrl } from "../../utils/youtube";
 
-const youtubeOpts = {
+const youtubeOpts: YouTubeProps["opts"] = {
+  width: "100%",
+  height: "100%",
   playerVars: {
-    autoplay: 0,
+    autoplay: 1,
     controls: 1,
     loop: 1,
     showinfo: 0,
@@ -49,9 +51,9 @@ const Video = ({
   const show = youtubeId === selectedId;
 
   useEffect(() => {
-    // if (!show && videoRef.current !== undefined) {
-    videoRef.current?.pauseVideo();
-    // }
+    if (!show && videoRef.current !== undefined) {
+      videoRef.current?.pauseVideo();
+    }
   }, [show]);
 
   const handler = () => {

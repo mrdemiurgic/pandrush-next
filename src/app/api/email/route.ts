@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import mailjet from '@/lib/mailjet';
+import sendEmail from '@/lib/email';
 
 export async function POST(request: NextRequest) {
   try {
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
 
     const { subject, body: emailBody } = body;
 
-    const result = await mailjet(subject, emailBody);
+    const result = await sendEmail(subject, emailBody);
 
     return NextResponse.json(
       { success: true, status: result },
